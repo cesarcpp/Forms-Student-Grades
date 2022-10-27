@@ -24,6 +24,14 @@
                         $("#show").html($("#nome").val() + " está em exame");
                     }
                 })
+                $("#empty").click(function(){
+                    $("#nome").val("");
+                    $("#rgm").val("");
+                    $("#nota1").val("");
+                    $("#nota2").val("");
+                    $("#nota3").val("");
+                    $("#nota4").val("");
+                })
             })
         </script>
         <style type="text/css">
@@ -110,6 +118,15 @@
                 border-radius: 5px;
                 background-color:#f1ff00;
             }
+            #forms input#empty
+            {
+                border-style:dashed;
+                position:absolute;
+                bottom: 2.5em;
+                right:10px;
+                border-radius: 5px;
+                background-color:#f1ff00;
+            }
             #show{
                 background-color: black;
                 color: white;
@@ -148,6 +165,7 @@
                     <br>
                     <br>
                     <input type="button" id="btn" value="Calcular">
+                    <input type="button" id="empty" value="Limpar">
                 </fieldset>
             </form>
         </div>
